@@ -1,0 +1,162 @@
+[
+  {
+    "id": "1",
+    "title": "PUBG: BATTLEGROUNDS",
+    "coverPhoto": "https://static0.xdaimages.com/wordpress/wp-content/uploads/2018/06/pubg.jpg?w=1200&h=675&fit=crop",
+    "category": "Battle Royale",
+    "downloadLink": "https://store.steampowered.com/app/578080/PUBG_BATTLEGROUNDS/",
+    "description": "The original battle royale that started it all. Up to 100 players parachute onto massive maps like Erangel, Miramar, Vikendi, and Sanhok, scavenging for weapons, vehicles, and equipment. Survive the ever-shrinking play zone, outsmart enemies with tactical positioning, and become the last person or squad standing. Features realistic gunplay, deep weapon customization, weather effects, and intense close-quarters combat. Regular seasons, ranked mode, and esports events keep the experience fresh.",
+    "ratings": "3.8",
+    "developer": "Krafton"
+  },
+  {
+    "id": "2",
+    "title": "Apex Legends",
+    "coverPhoto": "https://gmedia.playstation.com/is/image/SIEPDC/apex-legends-listing-thumb-01-ps4-en-29oct20?$facebook$",
+    "category": "Hero Shooter",
+    "downloadLink": "https://store.steampowered.com/app/1172470/Apex_Legends/",
+    "description": "Fast-paced hero shooter set in the Titanfall universe. Choose from a diverse roster of Legends, each with unique abilities, ultimate charges, and playstyles. Squad up in trios or duos, drop into beautifully crafted maps, and combine gunplay with tactical abilities. Features ping system for seamless communication, respawn beacons, evolving seasonal content, ranked leagues, and limited-time modes. Constantly updated with new legends, weapons, and map changes.",
+    "ratings": "3.3",
+    "developer": "Respawn Entertainment"
+  },
+  {
+    "id": "3",
+    "title": "Call of Duty: Warzone",
+    "coverPhoto": "https://cdn.wallpapersafari.com/45/14/P2Djro.jpg",
+    "category": "Battle Royale",
+    "downloadLink": "https://www.callofduty.com/warzone",
+    "description": "Massive free-to-play battle royale experience with up to 120 players dropping into Verdansk, Caldera, Urzikstan, and more. Features iconic Call of Duty gunplay, loadouts purchased with in-match cash, gulag 1v1 redemption, contracts, and vehicles ranging from ATVs to helicopters. Integrated with Modern Warfare, Black Ops, and Vanguard titles for shared progression, operators, and weapon blueprints. Regular seasonal updates bring new maps, modes, and events.",
+    "ratings": "3.9",
+    "developer": "Activision"
+  },
+  {
+    "id": "4",
+    "title": "Battlefield 2042",
+    "coverPhoto": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1517290/capsule_616x353.jpg?t=1761752400",
+    "category": "FPS",
+    "downloadLink": "https://store.steampowered.com/app/1517290/Battlefield_2042/",
+    "description": "Near-future all-out warfare supporting 128 players on massive maps. Experience dynamic weather, levolution events, and total battlefield chaos with tanks, jets, helicopters, and drones. Choose from specialists with unique gadgets and traits, engage in Conquest, Breakthrough, and Portal mode featuring remastered classics. Regular seasons add new specialists, weapons, vehicles, and maps with a focus on large-scale combined arms combat.",
+    "ratings": "3.0",
+    "developer": "EA DICE"
+  },
+  {
+    "id": "5",
+    "title": "Valorant",
+    "coverPhoto": "https://www.riotgames.com/darkroom/1440/d0807e131a84f2e42c7a303bda672789:3d02afa7e0bfb75f645d97467765b24c/valorant-offwhitelaunch-keyart.jpg",
+    "category": "Tactical FPS",
+    "downloadLink": "https://playvalorant.com/en-us/",
+    "description": "Precision-based 5v5 tactical shooter where every bullet counts. Choose from a growing roster of agents with unique abilities—smokes, flashes, heals, and ultimates. Plant or defuse the spike across beautifully designed maps in attack/defend rounds. Economy management, weapon accuracy, and ability synergy define high-level play. Features ranked competitive mode, Premier leagues, esports circuit, and constant balance updates.",
+    "ratings": "4.2",
+    "developer": "Riot Games"
+  },
+  {
+    "id": "6",
+    "title": "Counter-Strike 2",
+    "coverPhoto": "https://www.csgoroll.com/blog/content/images/size/w2000/2025/01/counter-strike-2-pc-game-steam-cover.jpg",
+    "category": "FPS",
+    "downloadLink": "https://store.steampowered.com/app/730/CounterStrike_2/",
+    "description": "The legendary tactical shooter reborn on Source 2 engine. Features upgraded visuals, smoke grenades that react to bullets and grenades, sub-tick updates for ultra-precise gameplay, revamped maps, and improved anti-cheat. Compete in classic bomb defusal, hostage rescue, and Premier competitive mode. The gold standard of competitive FPS with decades of muscle memory and an unmatched esports legacy.",
+    "ratings": "4.3",
+    "developer": "Valve"
+  },
+  {
+    "id": "7",
+    "title": "The Witcher 3: Wild Hunt",
+    "coverPhoto": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/292030/ad9240e088f953a84aee814034c50a6a92bf4516/header.jpg?t=1756366569",
+    "category": "Open-World Action RPG",
+    "downloadLink": "https://store.steampowered.com/app/292030/The_Witcher_3_Wild_Hunt/",
+    "description": "Acclaimed open-world RPG masterpiece where you step into the boots of Geralt of Rivia, a grizzled monster hunter in a morally gray fantasy world ravaged by war. Traverse the vast Continent—from the plague-ridden swamps of Velen, the bustling streets of free city Novigrad, to the stormy isles of Skellige—completing over 100 hours of branching quests, hunting mythical beasts with swords, signs, bombs, and potions. Your choices shape multiple endings, relationships with iconic characters like Yennefer, Triss, and Ciri, and the fate of kingdoms. Expansions Hearts of Stone and Blood and Wine deliver standalone 40+ hour stories rivaling the best games ever made. Next-gen update enhances visuals with ray-tracing, 60+ FPS, quick saves, Photo Mode, and 3D audio for immersive storytelling and exploration.",
+    "ratings": "4.8",
+    "developer": "CD PROJEKT RED"
+  },
+  {
+    "id": "8",
+    "title": "Dota 2",
+    "coverPhoto": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/570/capsule_616x353.jpg?t=1762820658",
+    "category": "MOBA",
+    "downloadLink": "https://store.steampowered.com/app/570/Dota_2/",
+    "description": "The deepest and most rewarding competitive MOBA ever made. Over 120 heroes, thousands of items, complex mechanics, and near-infinite strategic depth. Destroy the enemy Ancient in 5v5 matches that can last from 20 minutes to over an hour. Home to The International—the biggest prize pool in esports history—and a passionate community that has shaped the genre for over a decade.",
+    "ratings": "4.6",
+    "developer": "Valve"
+  },
+  {
+    "id": "9",
+    "title": "League of Legends",
+    "coverPhoto": "https://i0.wp.com/highschool.latimes.com/wp-content/uploads/2021/09/league-of-legends.jpeg?fit=1200%2C668&ssl=1",
+    "category": "MOBA",
+    "downloadLink": "https://www.leagueoflegends.com/en-us/",
+    "description": "The world’s largest esport with over 140 champions, constant patches, and a massive competitive scene. Battle on Summoner’s Rift in 5v5 matches, destroy turrets, slay dragons and Baron, and push to the enemy Nexus. Features ranked solo/duo and flex queues, Clash tournaments, seasonal rewards, skins, and an ever-evolving meta shaped by millions of players worldwide.",
+    "ratings": "4.1",
+    "developer": "Riot Games"
+  },
+  {
+    "id": "10",
+    "title": "Dark Souls 3",
+    "coverPhoto": "https://m.media-amazon.com/images/I/91rTxm40jwL.jpg",
+    "category": "Action RPG",
+    "downloadLink": "https://store.steampowered.com/app/374320/DARK_SOULS_III/",
+    "description": "A masterpiece of atmospheric world design, brutal difficulty, and rewarding combat. Explore the decaying kingdom of Lothric, battle grotesque bosses like Abyss Watchers and Nameless King, and link the First Flame. Features fast-paced combat compared to its predecessors, weapon arts, deep build variety, and some of the most memorable boss fights in gaming history.",
+    "ratings": "4.9",
+    "developer": "FromSoftware"
+  },
+  {
+    "id": "11",
+    "title": "Elden Ring",
+    "coverPhoto": "https://i.ebayimg.com/images/g/oyEAAOSwIBdijBIx/s-l400.jpg",
+    "category": "Open-World Action RPG",
+    "downloadLink": "https://store.steampowered.com/app/1245620/ELDEN_RING/",
+    "description": "FromSoftware’s magnum opus—an open-world masterpiece co-written with George R. R. Martin. Explore the vast Lands Between on horseback, discover hidden dungeons, defeat demigods, and piece together the mystery of the shattered Elden Ring. Unparalleled freedom in build crafting, exploration, and combat approach. The Shadow of the Erdtree expansion adds an entirely new massive region.",
+    "ratings": "4.8",
+    "developer": "FromSoftware"
+  },
+  {
+    "id": "12",
+    "title": "Lies of P",
+    "coverPhoto": "https://media.altchar.com/prod/images/gm_article_promo_image/11d1d8a8e49b-liesofp.jpg",
+    "category": "Action RPG",
+    "downloadLink": "https://store.steampowered.com/app/1627720/Lies_of_P/",
+    "description": "A stunning soulslike retelling of Pinocchio set in the Belle Époque city of Krat overrun by murderous puppets. Master weapon assembly system, lie-or-tell-truth narrative choices, and parry-heavy combat. Features gorgeous visuals, haunting soundtrack, multiple endings, and some of the most satisfying boss fights in the genre.",
+    "ratings": "4.7",
+    "developer": "ROUND8 Studio"
+  },
+  {
+    "id": "13",
+    "title": "Clair Obscur: Expedition 33",
+    "coverPhoto": "https://cdnb.artstation.com/p/assets/covers/images/076/962/927/large/nicholas-maxson-francombe-nicholas-maxson-francombe-2023-10-26-keyartexp33-full-1.jpg?1718223251",
+    "category": "Turn-Based RPG",
+    "downloadLink": "https://store.steampowered.com/app/1903340/Clair_Obscur_Expedition_33/",
+    "description": "A breathtaking turn-based RPG with real-time mechanics, painterly visuals, and a unique premise: every year the Paintress awakens and paints a number—everyone of that age vanishes. Expedition 33 is the final attempt to stop her. Features reactive turn-based combat, dodge/parry timing, deep character builds, and a hauntingly beautiful world inspired by Belle Époque France.",
+    "ratings": "4.6",
+    "developer": "Sandfall Interactive"
+  },
+  {
+    "id": "14",
+    "title": "Rust",
+    "coverPhoto": "https://images2.penguinrandomhouse.com/smedia/9781506746050",
+    "category": "Survival",
+    "downloadLink": "https://store.steampowered.com/app/252490/Rust/",
+    "description": "The ultimate hardcore survival experience. Spawn naked on a procedurally generated island, gather resources, craft tools, build bases from twig to armored fortresses, and interact with other players—cooperate or raid. Features electricity systems, trains, helicopters, monuments with puzzles and loot, and monthly wipes on thousands of community servers.",
+    "ratings": "4.4",
+    "developer": "Facepunch Studios"
+  },
+  {
+    "id": "15",
+    "title": "Minecraft",
+    "coverPhoto": "https://www.bluedogposters.com.au/cdn/shop/collections/Minecraft_posters_online_750x.progressive.jpg?v=1688105706",
+    "category": "Sandbox",
+    "downloadLink": "https://www.minecraft.net/",
+    "description": "The biggest game in the world—limitless creativity in a blocky universe. Survive against zombies and creepers, explore infinite procedurally generated worlds, build anything from simple houses to functioning computers, play with friends on realms or massive servers. Regular updates add new biomes, mobs, and mechanics. Modding community extends lifespan indefinitely.",
+    "ratings": "4.9",
+    "developer": "Mojang Studios"
+  },
+  {
+    "id": "16",
+    "title": "Terraria",
+    "coverPhoto": "https://gaming-cdn.com/images/products/932/orig/terraria-pc-mac-game-steam-cover.jpg?v=1683791474",
+    "category": "Sandbox Adventure",
+    "downloadLink": "https://store.steampowered.com/app/105600/Terraria/",
+    "description": "Often called '2D Minecraft with actual bosses and progression.' Dig, fight, explore, and build in a vibrant pixel-art world filled with hundreds of enemies, over , and over a dozen massive bosses. Features expert mode, hardmode, multiple classes (melee, ranged, magic, summoner), events like Blood Moon and Solar Eclipse, and near-endless replayability with mods.",
+    "ratings": "4.9",
+    "developer": "Re-Logic"
+  }
+]
