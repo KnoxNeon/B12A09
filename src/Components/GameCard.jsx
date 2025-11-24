@@ -1,10 +1,28 @@
 import React from 'react'
+import { IoMdDownload } from "react-icons/io";
+import { FaStar } from "react-icons/fa";
+import { Link } from 'react-router';
 
-const GameCard = () => {
+const GameCard = ({game}) => {
+
   return (
-    <div>
-      
-    </div>
+      <div>
+          <Link to={`/game/${game.id}`} className="card bg-base-100 w-full h-[200px] md:h-[300px] lg:h-[430px] shadow-sm hover:scale-105 p-2 lg:p-6">
+              <figure>
+                  <img className='md:w-full md:h-[250px] lg:h-[300px] rounded-3xl object-cover md:object-contain lg:p-6'
+                      src={game.coverPhoto}
+                      alt="{game.title}" />
+              </figure>
+              <div className="">
+                  <h2 className="text-center mx-auto font-medium text-xl lg:pb-4">{game.title}</h2>
+            
+                  <div className="flex justify-between gap-2 flex-nowrap">
+                      <button className="btn bg-[#F1F5E8] text-[#00D390] lg:text-base lg:font-medium"> <IoMdDownload />{game.category}M</button>
+                      <button className="btn bg-[#FFF0E1] text-[#FF8811] lg:text-base lg:font-medium"><FaStar />{game.ratings}</button>
+                  </div>
+              </div>
+          </Link>
+      </div>
   )
 }
 
