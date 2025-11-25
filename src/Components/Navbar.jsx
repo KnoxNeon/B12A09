@@ -5,7 +5,7 @@ import { Link, NavLink } from 'react-router';
 const Navbar = () => {
   return (
     <div>
-      <div className="navbar bg-base-100 shadow-sm">
+      <div className="navbar bg-[#E0243F] text-black font-bold shadow-sm">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -20,8 +20,7 @@ const Navbar = () => {
       </ul>
     </div>
     <NavLink className='flex btn btn-ghost'>
-      <img className='h-20 w-20' src="../gh.png" alt="" />
-    <div className=" text-xl bg-linear-to-r from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent">GAMEHUB</div>
+      <img className='h-16 w-16' src="../gh.png" alt="" />
     </NavLink>
     
   </div>
@@ -32,10 +31,10 @@ const Navbar = () => {
       <li><Link to='/installation'>News</Link></li>
     </ul>
   </div>
-  <div className="navbar-end">
+  <div className="navbar-end ">
     
-    <Link to='https://github.com/KnoxNeon' className="btn text-white bg-linear-to-r from-[#632EE3] to-[#9F62F2]"><FaGithub /> Login</Link>
-    <Link to='https://github.com/KnoxNeon' className="btn text-white bg-linear-to-r from-[#632EE3] to-[#9F62F2]"><FaGithub /> Register</Link>
+    <Link to='https://github.com/KnoxNeon' className="btn border-0 shadow text-white bg-black"><FaGithub /> Login</Link>
+    <Link to='https://github.com/KnoxNeon' className="btn border-0 shadow text-white bg-black"><FaGithub /> Register</Link>
   </div>
 </div>
     </div>

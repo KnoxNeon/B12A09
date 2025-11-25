@@ -5,24 +5,28 @@ import { Link } from 'react-router';
 
 const GameCard = ({game}) => {
 
-  return (
-      <div>
-          <Link to={`/game/${game.id}`} className="card bg-base-100 w-full h-[200px] md:h-[300px] lg:h-[430px] shadow-sm hover:scale-105 p-2 lg:p-6">
-              <figure>
-                  <img className='md:w-full md:h-[250px] lg:h-[300px] rounded-3xl object-cover md:object-contain lg:p-6'
-                      src={game.coverPhoto}
-                      alt="{game.title}" />
-              </figure>
-              <div className="">
-                  <h2 className="text-center mx-auto font-medium text-xl lg:pb-4">{game.title}</h2>
-            
-                  <div className="flex justify-between gap-2 flex-nowrap">
-                      <button className="btn bg-[#F1F5E8] text-[#00D390] lg:text-base lg:font-medium"> <IoMdDownload />{game.category}M</button>
-                      <button className="btn bg-[#FFF0E1] text-[#FF8811] lg:text-base lg:font-medium"><FaStar />{game.ratings}</button>
-                  </div>
-              </div>
-          </Link>
-      </div>
+    return (
+        <div className="card image-full w-96 h-96 shadow-xl rounded-xl overflow-hidden group">
+
+            <figure className="absolute inset-0">
+                <img
+                    src={game.coverPhoto}
+                    alt={game.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+            </figure>
+
+            <div className="card-body relative p-0 justify-end">
+                <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/30 to-transparent"></div>
+                <div className="relative z-10 p-6 space-y-3">
+                    <h2 className="card-title text-2xl text-white drop-shadow-lg">{game.title}</h2>
+                    <div className="flex justify-between items-center text-white">
+                        <span className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-medium border border-white/30">{game.category}</span>
+                        <span className="flex items-center gap-2 text-lg font-semibold"><FaStar className="text-yellow-400 drop-shadow" /> {game.ratings} </span>
+                    </div>
+                </div>
+            </div>
+</div>
   )
 }
 
