@@ -6,7 +6,7 @@ import { Link } from 'react-router';
 const GameCard = ({game}) => {
 
     return (
-        <div className="card image-full w-96 h-96 shadow-xl rounded-xl overflow-hidden group">
+        <Link to={`/game/${game.id}`} className="card image-full w-96 h-96 shadow-xl rounded-xl overflow-hidden group">
 
             <figure className="absolute inset-0">
                 <img
@@ -26,7 +26,7 @@ const GameCard = ({game}) => {
                     </div>
                 </div>
             </div>
-</div>
+</Link>
   )
 }
 
