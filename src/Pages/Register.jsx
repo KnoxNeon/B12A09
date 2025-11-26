@@ -1,7 +1,35 @@
 import { Link } from 'react-router';
-import { Mail, Lock, Gamepad2 } from 'lucide-react';
+import { Mail, Lock, Gamepad2, UserRoundPen, ImagePlus } from 'lucide-react';
+import { useContext } from 'react';
+import { AuthContext } from '../Provider/AuthProvider';
+import { updateProfile } from 'firebase/auth';
+import auth from '../firebase/firebase.config';
 
 export default function Register() {
+    const {registerWithEmailPassword} = useContext(AuthContext)
+    const handleSubmit = (e) =>{
+        e.preventDefault()
+        const email = e.target.email.value;
+        const pass = e.target.password.value;
+        const photoUrl = e.target.photoUrl.value;
+        const name = e.target.name.value;
+
+        registerWithEmailPassword(email, pass)
+        .then((userCredential) =>{
+            updateProfile(auth.currentUser, {
+                displayName: name, photoURL: photoUrl
+            }).then(() => {
+                console.log(userCredential.user)
+            }).catch((error)=>{
+                console.log(error)
+            })  
+        })
+        .catch(err =>{
+            console.log(err);  
+        }
+        )
+
+    }
   return (
     <div className="min-h-screen bg-gray-900 flex items-center justify-center px-4 py-12">
       
@@ -36,15 +64,37 @@ export default function Register() {
                 Register an Account
               </h2>
 
-              <form className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label className="flex items-center gap-3 text-gray-300 mb-2 text-sm font-medium">
                     <Mail className="w-5 h-5" />
                     Email Address
                   </label>
-                  <input
+                  <input name='email'
                     type="email"
                     placeholder="gamer@domain.com"
+                    className="w-full px-4 py-4 bg-gray-700/50 border border-gray-600 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:ring-4 focus:ring-purple-500/20 transition-all"
+                  />
+                </div>
+                <div>
+                  <label className="flex items-center gap-3 text-gray-300 mb-2 text-sm font-medium">
+                    <UserRoundPen className="w-5 h-5" />
+                    Full Name
+                  </label>
+                  <input name='name'
+                    type="text"
+                    placeholder="First Name + Last Name"
+                    className="w-full px-4 py-4 bg-gray-700/50 border border-gray-600 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:ring-4 focus:ring-purple-500/20 transition-all"
+                  />
+                </div>
+                <div>
+                  <label className="flex items-center gap-3 text-gray-300 mb-2 text-sm font-medium">
+                    <ImagePlus className="w-5 h-5" />
+                    PhotoURL
+                  </label>
+                  <input name='photoUrl'
+                    type="text"
+                    placeholder="https://yourphoto/"
                     className="w-full px-4 py-4 bg-gray-700/50 border border-gray-600 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:ring-4 focus:ring-purple-500/20 transition-all"
                   />
                 </div>
@@ -54,7 +104,7 @@ export default function Register() {
                     <Lock className="w-5 h-5" />
                     Password
                   </label>
-                  <input
+                  <input name='password'
                     type="password"
                     placeholder="••••••••"
                     className="w-full px-4 py-4 bg-gray-700/50 border border-gray-600 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:ring-4 focus:ring-purple-500/20 transition-all"

@@ -16,7 +16,7 @@ const Navbar = () => {
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
         <li><Link to='/'>Home</Link></li>
       <li><Link to='/games'>Games</Link></li>
-      <li><Link to='/installation'>News</Link></li>
+      <li><Link to='/news'>News</Link></li>
       </ul>
     </div>
     <NavLink className='flex btn btn-ghost'>
@@ -28,13 +28,13 @@ const Navbar = () => {
     <ul className="menu menu-horizontal px-1">
       <li><Link to='/'>Home</Link></li>
       <li><Link to='/games'>Games</Link></li>
-      <li><Link to='/installation'>News</Link></li>
+      <li><Link to='/news'>News</Link></li>
     </ul>
   </div>
   <div className="navbar-end ">
     
     <Link to='/login' className="btn border-0 shadow text-white bg-black"><FaGithub /> Login</Link>
-    <Link to='https://github.com/KnoxNeon' className="btn border-0 shadow text-white bg-black"><FaGithub /> Register</Link>
+    <Link to='/register' className="btn border-0 shadow text-white bg-black"><FaGithub /> Register</Link>
   </div>
 </div>
     </div>
