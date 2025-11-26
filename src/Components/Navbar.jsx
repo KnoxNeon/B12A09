@@ -5,7 +5,7 @@ import { Link, NavLink } from 'react-router';
 const Navbar = () => {
   return (
     <div>
-      <div className="navbar bg-[#E0243F] text-black font-bold shadow-sm">
+      <div className="navbar bg-[#801d2c] text-black font-bold shadow-sm">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -15,7 +15,7 @@ const Navbar = () => {
         tabIndex="-1"
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
         <li><Link to='/'>Home</Link></li>
-      <li><Link to='/apps'>Games</Link></li>
+      <li><Link to='/games'>Games</Link></li>
       <li><Link to='/installation'>News</Link></li>
       </ul>
     </div>
@@ -27,7 +27,7 @@ const Navbar = () => {
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
       <li><Link to='/'>Home</Link></li>
-      <li><Link to='/apps'>Games</Link></li>
+      <li><Link to='/games'>Games</Link></li>
       <li><Link to='/installation'>News</Link></li>
     </ul>
   </div>

@@ -2,9 +2,9 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer className="footer footer-vertical lg:footer-horizontal bg-[#E0243F] text-black font-bold p-10">
+    <footer className="footer footer-vertical lg:footer-horizontal bg-[#801d2c] text-black font-bold p-10">
   <aside>
-    <img className='h-20 w-20 border-' src="../logo.png" alt="" />
+    <img className='h-20 w-20 border-' src="../gh.png" alt="" />
     <p>
       HERO.IO
       <br />

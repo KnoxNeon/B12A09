@@ -7,7 +7,7 @@ import Slider from '../Components/Slider'
 
 const Home = () => {
      const {games, loading, error} = useGames()
-     const featuredGames = games.filter(game => game.ratings > 4.8)
+     const featuredGames = games.filter(game => game.ratings > 4.7)
   return (
 
     <div>
