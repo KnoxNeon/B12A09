@@ -1,12 +1,13 @@
 import { Link } from 'react-router';
 import { Mail, Lock, Gamepad2, UserRoundPen, ImagePlus } from 'lucide-react';
+import { FcGoogle } from "react-icons/fc";
 import { useContext } from 'react';
 import { AuthContext } from '../Provider/AuthProvider';
 import { updateProfile } from 'firebase/auth';
 import auth from '../firebase/firebase.config';
 
 export default function Register() {
-    const {registerWithEmailPassword, user, setUser} = useContext(AuthContext)
+    const {registerWithEmailPassword, user, setUser, handleGoogleSignin} = useContext(AuthContext)
     const handleSubmit = (e) =>{
         e.preventDefault()
         const email = e.target.email.value;
@@ -30,7 +31,16 @@ export default function Register() {
         })    
 
     }
-    console.log(user)
+      const googleSignup = () =>{
+      handleGoogleSignin()
+      .then(result =>{
+        const user = result.user
+        setUser(user)
+      })
+      .catch(err => console.log(err))
+      
+    }
+    
   return (
     <div className="min-h-screen bg-gray-900 flex items-center justify-center px-4 py-12">
       
@@ -135,14 +145,9 @@ export default function Register() {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-2 gap-4">
-                  <button className="py-3 bg-gray-700/50 hover:bg-gray-600 border border-gray-600 rounded-xl text-white font-medium transition-all">
-                    Google
+                <button onClick={googleSignup} className="py-3 px-6 mx-auto bg-gray-700/50 hover:bg-gray-600 border border-gray-600 rounded-xl text-white font-medium transition-all flex justify-center items-center gap-2">
+                    <FcGoogle />Google
                   </button>
-                  <button className="py-3 bg-gray-700/50 hover:bg-gray-600 border border-gray-600 rounded-xl text-white font-medium transition-all">
-                    Steam
-                  </button>
-                </div>
               </form>
             </div>
           </div>

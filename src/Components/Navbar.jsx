@@ -1,11 +1,16 @@
 import React, { useContext } from 'react'
-import { FaGithub } from "react-icons/fa";
 import { Link, NavLink } from 'react-router';
 import { AuthContext } from '../Provider/AuthProvider';
 import { Key, LogIn, LogOut } from 'lucide-react';
+import { signOut } from 'firebase/auth';
+import auth from '../firebase/firebase.config';
 
 const Navbar = () => {
   const {user} = useContext(AuthContext)
+
+  const handleSignOut = () =>{
+    signOut(auth)
+  } 
   return (
     <div>
       <div className="navbar bg-[#801d2c] text-black font-bold shadow-sm">
@@ -63,12 +68,12 @@ const Navbar = () => {
 
         <div className="navbar-end ">
           {user && (
-            <Link
-              to="/login"
+            <button
+              onClick={handleSignOut}
               className="btn border-0 shadow text-white bg-black"
             >
               <LogOut /> Logout
-            </Link>
+            </button>
           )}
           {!user && (
             <div>
