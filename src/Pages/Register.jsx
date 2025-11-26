@@ -1,0 +1,102 @@
+import { Link } from 'react-router';
+import { Mail, Lock, Gamepad2 } from 'lucide-react';
+
+export default function Register() {
+  return (
+    <div className="min-h-screen bg-gray-900 flex items-center justify-center px-4 py-12">
+      
+      <div className="absolute inset-0 bg-linear-to-br from-purple-900/20 via-gray-900 to-pink-900/20" />
+      
+      <div className="relative z-10 max-w-5xl w-full">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
+          
+          
+          <div className="text-center lg:text-left max-w-lg">
+            <div className="flex justify-center lg:justify-start mb-6">
+              <Gamepad2 className="w-16 h-16 text-purple-400" />
+            </div>
+            
+            <h1 className="text-5xl sm:text-6xl font-black text-white tracking-tight">
+              Welcome
+              <span className="block text-transparent bg-clip-text bg-linear-to-r from-purple-400 to-pink-400">
+                Gamer
+              </span>
+            </h1>
+            
+            <p className="mt-6 text-xl text-gray-300 leading-relaxed">
+              Join the ultimate gaming hub. Play, compete, and level up with millions of players worldwide.
+            </p>
+            
+          </div>
+
+          
+          <div className="w-full max-w-md">
+            <div className="bg-gray-800/70 backdrop-blur-xl rounded-3xl shadow-2xl border border-gray-700 p-8">
+              <h2 className="text-3xl font-bold text-white mb-8 text-center">
+                Register an Account
+              </h2>
+
+              <form className="space-y-6">
+                <div>
+                  <label className="flex items-center gap-3 text-gray-300 mb-2 text-sm font-medium">
+                    <Mail className="w-5 h-5" />
+                    Email Address
+                  </label>
+                  <input
+                    type="email"
+                    placeholder="gamer@domain.com"
+                    className="w-full px-4 py-4 bg-gray-700/50 border border-gray-600 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:ring-4 focus:ring-purple-500/20 transition-all"
+                  />
+                </div>
+
+                <div>
+                  <label className="flex items-center gap-3 text-gray-300 mb-2 text-sm font-medium">
+                    <Lock className="w-5 h-5" />
+                    Password
+                  </label>
+                  <input
+                    type="password"
+                    placeholder="••••••••"
+                    className="w-full px-4 py-4 bg-gray-700/50 border border-gray-600 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:ring-4 focus:ring-purple-500/20 transition-all"
+                  />
+                </div>
+
+                <div className="flex justify-center flex-col sm:flex-row items-center gap-4 text-sm">
+                  
+                  <Link to="/login" className="text-pink-400 hover:text-pink-300 transition-colors">
+                    Already have an account? <span className="font-bold">Sign In</span>
+                  </Link>
+                </div>
+
+                <button
+                  type="submit"
+                  className="w-full py-4 mt-6 bg-linear-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 rounded-xl font-bold text-lg text-white shadow-xl transform transition-all hover:scale-[1.02] active:scale-100"
+                >
+                  Sign Up
+                </button>
+
+                <div className="relative my-8">
+                  <div className="absolute inset-0 flex items-center">
+                    <div className="w-full border-t border-gray-600" />
+                  </div>
+                  <div className="relative flex justify-center text-sm">
+                    <span className="px-4 bg-gray-800 text-gray-500">Or continue with</span>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-2 gap-4">
+                  <button className="py-3 bg-gray-700/50 hover:bg-gray-600 border border-gray-600 rounded-xl text-white font-medium transition-all">
+                    Google
+                  </button>
+                  <button className="py-3 bg-gray-700/50 hover:bg-gray-600 border border-gray-600 rounded-xl text-white font-medium transition-all">
+                    Steam
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

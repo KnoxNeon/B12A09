@@ -33,7 +33,7 @@ const Navbar = () => {
   </div>
   <div className="navbar-end ">
     
-    <Link to='https://github.com/KnoxNeon' className="btn border-0 shadow text-white bg-black"><FaGithub /> Login</Link>
+    <Link to='/login' className="btn border-0 shadow text-white bg-black"><FaGithub /> Login</Link>
     <Link to='https://github.com/KnoxNeon' className="btn border-0 shadow text-white bg-black"><FaGithub /> Register</Link>
   </div>
 </div>
