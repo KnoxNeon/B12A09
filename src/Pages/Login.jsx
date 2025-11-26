@@ -1,7 +1,25 @@
 import { Link } from 'react-router';
 import { Mail, Lock, Gamepad2 } from 'lucide-react';
+import { useContext } from 'react';
+import { AuthContext } from '../Provider/AuthProvider';
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import auth from '../firebase/firebase.config';
 
 export default function Login() {
+    const {user, setUser} = useContext(AuthContext)
+
+    const handleSubmit = (e) =>{
+        e.preventDefault()
+        const email = e.target.email.value;
+        const pass = e.target.password.value;
+
+        signInWithEmailAndPassword(auth, email, pass)
+        .then((userCredential)=>{
+            const user = userCredential.user;
+            setUser(user)
+        }).catch((error) => console.log(error))
+    }
+    console.log(user)
   return (
     <div className="min-h-screen bg-gray-900 flex items-center justify-center px-4 py-12">
       
@@ -36,13 +54,14 @@ export default function Login() {
                 Login to Continue
               </h2>
 
-              <form className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label className="flex items-center gap-3 text-gray-300 mb-2 text-sm font-medium">
                     <Mail className="w-5 h-5" />
                     Email Address
                   </label>
                   <input
+                    name='email'
                     type="email"
                     placeholder="gamer@domain.com"
                     className="w-full px-4 py-4 bg-gray-700/50 border border-gray-600 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:ring-4 focus:ring-purple-500/20 transition-all"
@@ -55,6 +74,7 @@ export default function Login() {
                     Password
                   </label>
                   <input
+                    name='password'
                     type="password"
                     placeholder="••••••••"
                     className="w-full px-4 py-4 bg-gray-700/50 border border-gray-600 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:ring-4 focus:ring-purple-500/20 transition-all"

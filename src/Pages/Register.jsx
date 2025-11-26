@@ -6,7 +6,7 @@ import { updateProfile } from 'firebase/auth';
 import auth from '../firebase/firebase.config';
 
 export default function Register() {
-    const {registerWithEmailPassword} = useContext(AuthContext)
+    const {registerWithEmailPassword, user, setUser} = useContext(AuthContext)
     const handleSubmit = (e) =>{
         e.preventDefault()
         const email = e.target.email.value;
@@ -19,17 +19,18 @@ export default function Register() {
             updateProfile(auth.currentUser, {
                 displayName: name, photoURL: photoUrl
             }).then(() => {
-                console.log(userCredential.user)
+                setUser(userCredential.user)
+                
             }).catch((error)=>{
                 console.log(error)
             })  
         })
         .catch(err =>{
             console.log(err);  
-        }
-        )
+        })    
 
     }
+    console.log(user)
   return (
     <div className="min-h-screen bg-gray-900 flex items-center justify-center px-4 py-12">
       
