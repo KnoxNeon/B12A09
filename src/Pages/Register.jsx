@@ -1,4 +1,4 @@
-import { Link } from 'react-router';
+import { Link, useLocation, useNavigate } from 'react-router'; 
 import { Mail, Lock, Gamepad2, UserRoundPen, ImagePlus } from 'lucide-react';
 import { FcGoogle } from "react-icons/fc";
 import { useContext } from 'react';
@@ -7,39 +7,72 @@ import { updateProfile } from 'firebase/auth';
 import auth from '../firebase/firebase.config';
 
 export default function Register() {
-    const {registerWithEmailPassword, user, setUser, handleGoogleSignin} = useContext(AuthContext)
-    const handleSubmit = (e) =>{
-        e.preventDefault()
-        const email = e.target.email.value;
+    const { registerWithEmailPassword, setUser, handleGoogleSignin } = useContext(AuthContext);
+
+    
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const email = e.target.email.value.trim();
         const pass = e.target.password.value;
-        const photoUrl = e.target.photoUrl.value;
-        const name = e.target.name.value;
+        const photoUrl = e.target.photoUrl.value.trim();
+        const name = e.target.name.value.trim();
 
-        registerWithEmailPassword(email, pass)
-        .then((userCredential) =>{
-            updateProfile(auth.currentUser, {
-                displayName: name, photoURL: photoUrl
-            }).then(() => {
-                setUser(userCredential.user)
-                
-            }).catch((error)=>{
-                console.log(error)
-            })  
-        })
-        .catch(err =>{
-            console.log(err);  
-        })    
+        
+        const uppercase = /[A-Z]/;
+        const lowercase = /[a-z]/;
 
-    }
-      const googleSignup = () =>{
-      handleGoogleSignin()
-      .then(result =>{
-        const user = result.user
-        setUser(user)
-      })
-      .catch(err => console.log(err))
-      
-    }
+        if (pass.length < 6) {
+            return alert("Password must be at least 6 characters");
+        }
+        if (!uppercase.test(pass)) {
+            return alert("Password must have at least one uppercase letter");
+        }
+        if (!lowercase.test(pass)) {
+            return alert("Password must have at least one lowercase letter");
+        }
+        if (!name) {
+            return alert("Please enter your name");
+        }
+
+        try {
+           
+            const userCredential = await registerWithEmailPassword(email, pass);
+            const user = userCredential.user;
+
+            
+            await updateProfile(user, {
+                displayName: name,
+                photoURL: photoUrl || null
+            });
+
+            
+            setUser(user);
+
+           
+            const redirectTo = location.state?.from?.pathname || '/';
+            navigate(redirectTo, { replace: true });
+
+        } catch (err) {
+            console.error("Registration failed:", err);
+            alert(err.message || "Failed to register. Try again.");
+        }
+    };
+
+    const googleSignup = async () => {
+        try {
+            const result = await handleGoogleSignin();
+            setUser(result.user);
+
+            const redirectTo = location.state?.from?.pathname || '/';
+            navigate(redirectTo, { replace: true });
+        } catch (err) {
+            console.error(err);
+            alert("Google sign-in failed");
+        }
+    };
     
   return (
     <div className="min-h-screen bg-gray-900 flex items-center justify-center px-4 py-12">

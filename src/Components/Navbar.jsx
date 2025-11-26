@@ -13,7 +13,7 @@ const Navbar = () => {
   } 
   return (
     <div>
-      <div className="navbar bg-[#801d2c] text-black font-bold shadow-sm">
+      <div className="navbar bg-linear-to-r from-purple-600 to-pink-600 hover:from-purple-500 text-black font-bold shadow-sm">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -68,13 +68,12 @@ const Navbar = () => {
 
         <div className="navbar-end ">
           {user && (
-            <button
-              onClick={handleSignOut}
-              className="btn border-0 shadow text-white bg-black"
-            >
-              <LogOut /> Logout
-            </button>
+            <div className='flex gap-2'>
+              <Link to="/profile"><img className='w-10 h-10 rounded-4xl hover:scale-110' src={user.photoURL} alt="" /></Link>
+              <button onClick={handleSignOut} className="btn border-0 shadow text-white bg-black"><LogOut /> Logout</button>
+            </div>
           )}
+
           {!user && (
             <div>
               <Link

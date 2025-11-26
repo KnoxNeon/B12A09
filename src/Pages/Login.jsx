@@ -1,4 +1,4 @@
-import { Link } from 'react-router';
+import { Link, useLocation, useNavigate } from 'react-router';
 import { Mail, Lock, Gamepad2 } from 'lucide-react';
 import { FcGoogle } from "react-icons/fc";
 import { useContext } from 'react';
@@ -8,6 +8,8 @@ import auth from '../firebase/firebase.config';
 
 export default function Login() {
     const {user, setUser, handleGoogleSignin} = useContext(AuthContext)
+    const location = useLocation()
+    const navigate = useNavigate();
 
     const handleSubmit = (e) =>{
         e.preventDefault()
@@ -17,7 +19,8 @@ export default function Login() {
         signInWithEmailAndPassword(auth, email, pass)
         .then((userCredential)=>{
             const user = userCredential.user;
-            setUser(user)
+            const redirectTo = location.state?.from?.pathname || '/';
+            navigate(redirectTo, { replace: true });
         }).catch((error) => console.log(error))
     }
 
@@ -26,6 +29,8 @@ export default function Login() {
       .then(result =>{
         const user = result.user
         setUser(user)
+        const redirectTo = location.state?.from?.pathname || '/';
+        navigate(redirectTo, { replace: true });
       })
       .catch(err => console.log(err))
       
