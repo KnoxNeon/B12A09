@@ -9,6 +9,7 @@ import Register from "../Pages/Register";
 import PrivateRoute from "./PrivateRoute"
 import ErrorPage from "../Pages/ErrorPage";
 import ForgetPass from "../Pages/ForgetPass";
+import News from "../Pages/News";
 
 
 
@@ -32,7 +33,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/news",
-        element: <Home />,
+        element: <News />,
       },
       {
         path: "/game/:id",
