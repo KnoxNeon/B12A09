@@ -4,6 +4,7 @@ import { Link } from 'react-router'
 import useGames from '../Hooks/useGames'
 import GameCard from '../Components/GameCard'
 import Slider from '../Components/Slider'
+import Newsletter from '../Components/Newsletter'
 
 const Home = () => {
      const {games, loading, error} = useGames()
@@ -11,7 +12,7 @@ const Home = () => {
   return (
 
     <div>
-      <div className='p-10' >
+      <div className='pt-10' >
         <Slider />
         <h1 className='text-[#627382] lg:mt-20 mb-2 text-3xl lg:text-5xl font-bold text-center'>Popular Games</h1>
         <p className='text-[#627382] text-md lg:text-xl text-center pb-10'>Explore All Trending Games Played By Gamers</p>
@@ -22,7 +23,7 @@ const Home = () => {
             ))
           }
         </div>
-        <div className="flex justify-center pb-10"><Link className='btn btn-ghost  text-white bg-[#E0243F] px-8 ' to='/apps'>See All</Link></div>
+        <Newsletter/>
       </div>
 
 

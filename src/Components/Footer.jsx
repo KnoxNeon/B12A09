@@ -2,11 +2,11 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer className="footer footer-vertical lg:footer-horizontal bg-linear-to-r from-purple-600 to-pink-600 hover:from-purple-500 text-black font-bold p-10">
+    <footer className="footer z-10 footer-vertical lg:footer-horizontal bg-[#0f172a] text-gray-300 border-t border-white/10 font-bold p-10">
   <aside>
     <img className='h-20 w-20 border-' src="../gh.png" alt="" />
     <p>
-      HERO.IO
+      GAMEHUB
       <br />
       Copyright © 2025 - All right reserved
     </p>

@@ -33,25 +33,19 @@ export default function Register() {
         if (!lowercase.test(pass)) {
             return alert("Password must have at least one lowercase letter");
         }
-        if (!name) {
-            return alert("Please enter your name");
-        }
 
         try {
            
             const userCredential = await registerWithEmailPassword(email, pass);
             const user = userCredential.user;
 
-            
             await updateProfile(user, {
                 displayName: name,
                 photoURL: photoUrl || null
             });
 
-            
             setUser(user);
 
-           
             const redirectTo = location.state?.from?.pathname || '/';
             navigate(redirectTo, { replace: true });
 
@@ -77,12 +71,11 @@ export default function Register() {
   return (
     <div className="min-h-screen bg-gray-900 flex items-center justify-center px-4 py-12">
       
-      <div className="absolute inset-0 bg-linear-to-br from-purple-900/20 via-gray-900 to-pink-900/20" />
+      <div className="absolute inset-0  bg-linear-to-br from-purple-900/20 via-gray-900 to-pink-900/20" />
       
       <div className="relative z-10 max-w-5xl w-full">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
-          
-          
+        
           <div className="text-center lg:text-left max-w-lg">
             <div className="flex justify-center lg:justify-start mb-6">
               <Gamepad2 className="w-16 h-16 text-purple-400" />

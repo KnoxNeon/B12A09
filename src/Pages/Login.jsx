@@ -1,7 +1,7 @@
 import { Link, useLocation, useNavigate } from 'react-router';
 import { Mail, Lock, Gamepad2 } from 'lucide-react';
 import { FcGoogle } from "react-icons/fc";
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { AuthContext } from '../Provider/AuthProvider';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import auth from '../firebase/firebase.config';
@@ -10,6 +10,7 @@ export default function Login() {
     const {user, setUser, handleGoogleSignin} = useContext(AuthContext)
     const location = useLocation()
     const navigate = useNavigate();
+    const [email, setEmail] = useState('')
 
     const handleSubmit = (e) =>{
         e.preventDefault()
@@ -19,8 +20,8 @@ export default function Login() {
         signInWithEmailAndPassword(auth, email, pass)
         .then((userCredential)=>{
             const user = userCredential.user;
-            const redirectTo = location.state?.from?.pathname || '/';
-            navigate(redirectTo, { replace: true });
+            setUser(user)
+            navigate(location.state)
         }).catch((error) => console.log(error))
     }
 
@@ -29,15 +30,18 @@ export default function Login() {
       .then(result =>{
         const user = result.user
         setUser(user)
-        const redirectTo = location.state?.from?.pathname || '/';
-        navigate(redirectTo, { replace: true });
+        navigate(location.state)
       })
       .catch(err => console.log(err))
       
     }
 
+    const handleForget = () =>{
+      navigate(`/forget/${email}`)
+    }
+
   return (
-    <div className="min-h-screen bg-gray-900 flex items-center justify-center px-4 py-12">
+    <div className=" bg-gray-900 flex items-center justify-center px-4 py-12">
       
       <div className="absolute inset-0 bg-linear-to-br from-purple-900/20 via-gray-900 to-pink-900/20" />
       
@@ -77,6 +81,7 @@ export default function Login() {
                     Email Address
                   </label>
                   <input
+                    onChange={(e)=> setEmail(e.target.value)}
                     name='email'
                     type="email"
                     placeholder="gamer@domain.com"
@@ -98,9 +103,9 @@ export default function Login() {
                 </div>
 
                 <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-sm">
-                  <a href="#" className="text-purple-400 hover:text-purple-300 transition-colors">
+                  <button onClick={handleForget} href="#" className="text-purple-400 hover:text-purple-300 transition-colors">
                     Forgot password?
-                  </a>
+                  </button>
                   <Link to="/register" className="text-pink-400 hover:text-pink-300 transition-colors">
                     Don't have an account? <span className="font-bold">Register</span>
                   </Link>

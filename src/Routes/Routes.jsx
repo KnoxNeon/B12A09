@@ -8,48 +8,60 @@ import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import PrivateRoute from "./PrivateRoute"
 import ErrorPage from "../Pages/ErrorPage";
+import ForgetPass from "../Pages/ForgetPass";
 
 
 
 export const router = createBrowserRouter([
   {
     path: "/",
-    element: <MainLayout/>,
-    errorElement: <ErrorPage/>,
+    element: <MainLayout />,
+    errorElement: <ErrorPage />,
     children: [
-       {
-            path: "/",
-            element: <Home/> 
-        },
-       {
-            path: "*",
-            element: <ErrorPage/> 
-        },
-       {
-            path: "/games",
-            element: <Games/> 
-        },
-       {
-            path: "/news",
-            element: <Home/> 
-        },
-       {
-            path: "/game/:id",
-            element: <PrivateRoute><GameDetails/></PrivateRoute> 
-        },   
-       {
-            path: "/profile",
-            element: <PrivateRoute><Profile/></PrivateRoute> 
-        },   
-    ]
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "*",
+        element: <ErrorPage />,
+      },
+      {
+        path: "/games",
+        element: <Games />,
+      },
+      {
+        path: "/news",
+        element: <Home />,
+      },
+      {
+        path: "/game/:id",
+        element: (
+          <PrivateRoute>
+            <GameDetails />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/profile",
+        element: (
+          <PrivateRoute>
+            <Profile />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/login",
+        element: <Login />,
+      },
+      {
+        path: "/register",
+        element: <Register />,
+      },
+      {
+        path: "/forget/:email",
+        element: <ForgetPass />,
+      },
+    ],
   },
-  {
-    path: "/login",
-    element: <Login/> 
-  },
-  {
-    path: "/register",
-    element: <Register/> 
-  },
- 
 ]);

@@ -7,7 +7,7 @@ import 'swiper/css/navigation';
 
 const Slider = () => {
   return (
-    <div className='mx-auto lg:w-[1500px]'>
+    <div className='mx-auto lg:w-[1400px]'>
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
