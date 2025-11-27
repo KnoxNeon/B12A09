@@ -18,7 +18,7 @@ const Newsletter = () => {
       <input
         type="email"
         placeholder="Enter your email address"
-        className="flex-1 px-6 py-4 rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-4 focus:ring-white/30"
+        className="flex-1 px-6 py-4 rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none ring-4 focus:ring-white/30"
       />
       
       <button className="px-8 py-4 bg-white text-purple-700 font-semibold rounded-xl hover:bg-gray-50 transition whitespace-nowrap">

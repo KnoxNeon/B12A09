@@ -2,11 +2,12 @@ import React from 'react'
 import { IoMdDownload } from "react-icons/io";
 import { FaStar } from "react-icons/fa";
 import { Link } from 'react-router';
+import { motion } from "motion/react"
 
 const GameCard = ({game}) => {
 
     return (
-        <Link to={`/game/${game.id}`} className="card image-full w-96 h-96 shadow-xl rounded-xl overflow-hidden group">
+        <motion.Link initial={ { scale:0.5 } } animate={{scale: 1, transition: { duration: 1 }}} to={`/game/${game.id}`} className="card image-full w-96 h-96 shadow-xl rounded-xl overflow-hidden group">
 
             <figure className="absolute inset-0">
                 <img
@@ -26,7 +27,7 @@ const GameCard = ({game}) => {
                     </div>
                 </div>
             </div>
-</Link>
+</motion.Link>
   )
 }
 

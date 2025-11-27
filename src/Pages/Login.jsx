@@ -30,7 +30,7 @@ export default function Login() {
       .then(result =>{
         const user = result.user
         setUser(user)
-        navigate(location.state)
+        navigate(location.state? location.state : '/')
       })
       .catch(err => console.log(err))
       
