@@ -4,10 +4,10 @@ const Footer = () => {
   return (
     <footer className="footer z-10 footer-vertical lg:footer-horizontal bg-[#0f172a] text-gray-300 border-t border-white/10 font-bold p-10">
   <aside>
-    <img className='h-20 w-20 border-' src="../gh.png" alt="" />
+    <img className='h-16 w-24' src="../gh.png" alt="" />
     <p>
-      GAMEHUB
-      <br />
+      
+      
       Copyright © 2025 - All right reserved
     </p>
   </aside>

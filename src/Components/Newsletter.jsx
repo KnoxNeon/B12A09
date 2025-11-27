@@ -3,13 +3,13 @@ import React from 'react'
 const Newsletter = () => {
   return (
     <div>
-      <section className="py-20 pb-24 lg:pb-32 bg-gradient-to-b from-slate-900 via-blue-950 to-indigo-950">
+      <section className="py-10 md:py-16 lg:py-20 pb-24 lg:pb-32 bg-linear-to-b from-slate-900 via-blue-950 to-indigo-950">
   <div className="max-w-4xl mx-auto px-6 text-center">
-    <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-      Never miss an update
+    <h2 className="text-4xl md:text-5xl font-bold text-orange-500 mb-6">
+      Never miss an update!
     </h2>
     
-    <p className="text-xl text-white/90 mb-10 max-w-2xl mx-auto leading-relaxed">
+    <p className="md:text-xl text-white/90 mb-10 max-w-2xl mx-auto leading-relaxed">
       Join 25,000+ subscribers and get the latest news, insights, and exclusive content 
       delivered straight to your inbox every week.
     </p>
@@ -21,7 +21,7 @@ const Newsletter = () => {
         className="flex-1 px-6 py-4 rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none ring-4 focus:ring-white/30"
       />
       
-      <button className="px-8 py-4 bg-white text-purple-700 font-semibold rounded-xl hover:bg-gray-50 transition whitespace-nowrap">
+      <button className="px-8 py-4 bg-orange-500 text-white font-semibold hover:scale-110 rounded-xl transition whitespace-nowrap">
         Subscribe Now
       </button>
     </div>

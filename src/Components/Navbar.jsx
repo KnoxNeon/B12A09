@@ -4,6 +4,7 @@ import { AuthContext } from '../Provider/AuthProvider';
 import { Key, LogIn, LogOut } from 'lucide-react';
 import { signOut } from 'firebase/auth';
 import auth from '../firebase/firebase.config';
+import { scale } from 'motion';
 
 const Navbar = () => {
   const {user} = useContext(AuthContext)
@@ -13,7 +14,7 @@ const Navbar = () => {
   } 
   return (
     <div>
-      <div className="navbar z-10 bg-[#0f172a] text-gray-300 border-t border-white/10 w-full text-grey font-bold shadow-sm">
+      <div className="navbar z-10 bg-[#0f172a] text-orange-500  border-t border-white/10 w-full text-grey font-bold shadow-sm">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -48,8 +49,8 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <NavLink className="flex btn btn-ghost">
-            <img className="h-16 w-16" src="../gh.png" alt="" />
+          <NavLink className="flex lg:pl-4">
+            <img className="h-16 w-24 hover:scale-120"  src="../gh.png" alt="" />
           </NavLink>
         </div>
         <div className="navbar-center hidden lg:flex">
@@ -63,6 +64,7 @@ const Navbar = () => {
             <li>
               <Link to="/news">News</Link>
             </li>
+            
           </ul>
         </div>
 
@@ -70,23 +72,23 @@ const Navbar = () => {
           {user && (
             <div className='flex gap-2'>
               <Link to="/profile"><img className='w-10 h-10 rounded-4xl hover:scale-110' src={user.photoURL} alt="" /></Link>
-              <button onClick={handleSignOut} className="btn border-0 shadow text-white bg-black"><LogOut /> Logout</button>
+              <button onClick={handleSignOut} className="btn border-0 shadow rounded-3xl gap-1 hover:scale-110 text-white bg-orange-500"> Logout</button>
             </div>
           )}
 
           {!user && (
-            <div>
+            <div className='space-x-2'>
               <Link
                 to="/login"
-                className="btn border-0 shadow text-white bg-black"
+                className="btn border-0 rounded-3xl shadow hover:scale-110 text-white bg-orange-500"
               >
-                <LogIn /> Login
+                 Login
               </Link>
               <Link
                 to="/register"
-                className="btn border-0 shadow text-white bg-black"
+                className="btn border-0 rounded-3xl shadow  hover:scale-110 text-white bg-orange-500"
               >
-                <Key /> Register
+                 Register
               </Link>
             </div>
           )}

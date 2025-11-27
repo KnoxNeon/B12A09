@@ -12,11 +12,11 @@ const Home = () => {
   return (
 
     <div>
-      <div className='pt-10' >
+      <div className='pt-4 md:pt-6 lg:pt-10' >
         <Slider />
-        <h1 className='text-[#627382] lg:mt-20 mb-2 text-3xl lg:text-5xl font-bold text-center'>Popular Games</h1>
-        <p className='text-[#627382] text-md lg:text-xl text-center pb-10'>Explore All Trending Games Played By Gamers</p>
-        <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-6 lg:my-10 m-6 lg:mx-20'>
+        <h1 className='mt-8 lg:mt-20 mb-2 text-3xl md:text-5xl font-bold text-center text-orange-500'>Popular Games</h1>
+        <p className='text-[#627382] text-md md:text-lg lg:text-xl text-center md:pb-10'>Explore All Trending Games Played By Gamers</p>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 lg:my-10 m-6 lg:mx-20'>
           {
             featuredGames.map(game => (
               <GameCard key={game.id} game={game} />
