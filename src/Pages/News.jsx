@@ -44,7 +44,7 @@ export default function News() {
   return (
     <section className="min-h-screen bg-gray-900 text-white py-10 px-6">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-black mb-12 text-center bg-clip-text text-transparent bg-linear-to-r from-purple-400 to-pink-400">
+        <h2 className="text-4xl md:text-5xl font-black mb-12 text-center text-orange-500">
           Latest Game Updates
         </h2>
 
@@ -88,7 +88,7 @@ export default function News() {
 
         
         <div className="text-center mt-12">
-          <button className="px-8 py-4 bg-linear-to-r from-purple-600 to-pink-600 rounded-xl font-bold text-lg hover:from-purple-500 hover:to-pink-500 transition-all transform hover:scale-105 shadow-xl">
+          <button className="px-8 py-4 bg-orange-500 rounded-2xl transition-all transform hover:scale-105 shadow-xl">
             View All Patch Notes
           </button>
         </div>

@@ -7,7 +7,7 @@ const PrivateRoute = ({children}) => {
     const location  = useLocation()
 
     if(loading){
-        <p>loadiinggggggggggggggg.............</p>
+        return <p>loadiinggggggggggggggg.............</p>
     }
 
     if(user){

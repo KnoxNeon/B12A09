@@ -50,7 +50,7 @@ const Navbar = () => {
             </ul>
           </div>
           <NavLink className="flex lg:pl-4">
-            <img className="h-16 w-24 hover:scale-120"  src="../gh.png" alt="" />
+            <img className="h-16 w-24 hover:scale-120 "  src="../gh.png" alt="" />
           </NavLink>
         </div>
         <div className="navbar-center hidden lg:flex">
@@ -71,7 +71,7 @@ const Navbar = () => {
         <div className="navbar-end ">
           {user && (
             <div className='flex gap-2'>
-              <Link to="/profile"><img className='w-10 h-10 rounded-4xl hover:scale-110' src={user.photoURL} alt="" /></Link>
+              <Link to="/profile"><img className='w-10 h-10 rounded-4xl border-2 border-orange-500 hover:scale-110' src={user.photoURL} alt="" /></Link>
               <button onClick={handleSignOut} className="btn border-0 shadow rounded-3xl gap-1 hover:scale-110 text-white bg-orange-500"> Logout</button>
             </div>
           )}
