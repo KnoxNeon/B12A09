@@ -2,8 +2,8 @@ import React from 'react'
 
 const ErrorPage = () => {
   return (
-    <div>
-      <img className='w-full h-100vh object-fit' src="../404.png" alt="" />
+    <div><title>404 Error</title>
+      <img className='w-[60vw] mx-auto h-[80vh] object-fit' src="../404.png" alt="" />
     </div>
   )
 }

@@ -1,4 +1,4 @@
-import { useParams } from "react-router";
+import { Link, useParams } from "react-router";
 import useGames from "../Hooks/useGames";
 import { Star, Download, Globe } from "lucide-react";
 
@@ -12,6 +12,7 @@ const GameDetails = () => {
 
   return (
     <div className="min-h-screen bg-gray-900 text-white">
+      <title>Game Details</title>
       <div className="relative h-96 sm:h-[500px] lg:h-[600px] overflow-hidden">
         <img
           src={game.coverPhoto}
@@ -59,8 +60,8 @@ const GameDetails = () => {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 py-16 -mt-12 sm:-mt-20 lg:-mt-32 relative z-10">
-        <div className="bg-gray-800/90  backdrop-blur-lg rounded-3xl shadow-2xl border md:mt-10 border-gray-700 p-8 sm:p-10 lg:p-12">
+      <div className="max-w-7xl mx-auto z-10 relative">
+        <div className="bg-gray-800/90  backdrop-blur-lg rounded-3xl shadow-2xl border  border-gray-700 p-8 sm:p-10 lg:p-12">
           <h2 className="text-2xl sm:text-3xl font-bold mb-6 flex items-center gap-3">
             <Globe className="w-7 h-7 sm:w-8 sm:h-8 text-purple-400" />
             About This Game

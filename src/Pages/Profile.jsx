@@ -27,6 +27,7 @@ const Profile = () => {
 
   return (
     <div className="max-w-sm mx-auto mt-10 bg-white rounded-xl shadow-lg overflow-hidden">
+      <title>Your Profile</title>
       <div className="bg-[#0f172a] p-6 text-center">
         <img
           src={user.photoURL}

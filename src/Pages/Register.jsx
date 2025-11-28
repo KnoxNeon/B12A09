@@ -5,6 +5,7 @@ import { useContext } from 'react';
 import { AuthContext } from '../Provider/AuthProvider';
 import { updateProfile } from 'firebase/auth';
 import auth from '../firebase/firebase.config';
+import { Bounce, toast } from 'react-toastify';
 
 export default function Register() {
     const { registerWithEmailPassword, setUser, handleGoogleSignin } = useContext(AuthContext);
@@ -25,13 +26,43 @@ export default function Register() {
         const lowercase = /[a-z]/;
 
         if (pass.length < 6) {
-            return alert("Password must be at least 6 characters");
+            return toast.warn("Password must be at least 6 characters!", {
+              position: "top-right",
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: false,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "dark",
+              transition: Bounce,
+            });
         }
         if (!uppercase.test(pass)) {
-            return alert("Password must have at least one uppercase letter");
+            return toast.warn("Password must have at least one uppercase letter!", {
+              position: "top-right",
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: false,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "dark",
+              transition: Bounce,
+            }); 
         }
         if (!lowercase.test(pass)) {
-            return alert("Password must have at least one lowercase letter");
+            return toast.warn("Password must have at least one lowercase letter!", {
+              position: "top-right",
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: false,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "dark",
+              transition: Bounce,
+            });
         }
 
         try {
@@ -70,6 +101,7 @@ export default function Register() {
     
   return (
     <div className="min-h-screen bg-gray-900 flex items-center justify-center px-4 py-12">
+      <title>Register an Account</title>
       
       <div className="absolute inset-0  bg-linear-to-br from-purple-900/20 via-gray-900 to-pink-900/20" />
       
@@ -81,14 +113,14 @@ export default function Register() {
               <Gamepad2 className="w-16 h-16 text-purple-400" />
             </div>
             
-            <h1 className="text-5xl sm:text-6xl font-black text-white tracking-tight">
+            <h1 className="text-5xl md:text-6xl font-black text-white tracking-tight">
               Welcome
               <span className="block text-transparent bg-clip-text bg-linear-to-r from-purple-400 to-pink-400">
                 Gamer
               </span>
             </h1>
             
-            <p className="mt-6 text-xl text-gray-300 leading-relaxed">
+            <p className="mt-6 md:text-xl text-gray-300 leading-relaxed">
               Join the ultimate gaming hub. Play, compete, and level up with millions of players worldwide.
             </p>
             

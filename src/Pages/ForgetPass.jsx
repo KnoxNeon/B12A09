@@ -21,7 +21,7 @@ const ForgetPass = () => {
         
     }
   return (
-    <div>
+    <div><title>Reset Password</title>
       <div className="w-[400px] mx-auto pt-10 space-y-2">
         <form onSubmit={handleSubmit} className="space-y-6">
           <label className="flex items-center gap-3 text-gray-300 mb-2 text-sm font-medium">

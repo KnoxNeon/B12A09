@@ -6,7 +6,8 @@ import { motion } from "motion/react"
 const Games = () => {
     const {games, loading, error} = useGames()
   return (
-    <motion.div  className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-6 lg:my-10 m-6 lg:mx-20'>
+    <motion.div  className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 lg:my-10 m-6 lg:mx-20'>
+      <title>Games</title>
       {
             games.map(game => (
               <GameCard key={game.id} game={game} />

@@ -5,6 +5,7 @@ import { useContext, useState } from 'react';
 import { AuthContext } from '../Provider/AuthProvider';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import auth from '../firebase/firebase.config';
+import { Bounce, toast } from 'react-toastify';
 
 export default function Login() {
     const {user, setUser, handleGoogleSignin} = useContext(AuthContext)
@@ -22,6 +23,17 @@ export default function Login() {
             const user = userCredential.user;
             setUser(user)
             navigate(location.state)
+            toast.success("Signed In Successfully!", {
+              position: "top-right",
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: false,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "dark",
+              transition: Bounce,
+            });
         }).catch((error) => console.log(error))
     }
 
@@ -31,6 +43,17 @@ export default function Login() {
         const user = result.user
         setUser(user)
         navigate(location.state? location.state : '/')
+        toast.success("Signed In Successfully!", {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: false,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+          transition: Bounce,
+        });
       })
       .catch(err => console.log(err))
       
@@ -42,6 +65,7 @@ export default function Login() {
 
   return (
     <div className=" bg-gray-900 flex items-center justify-center px-4 py-12">
+      <title>Login</title>
       
       <div className="absolute inset-0 bg-linear-to-br from-purple-900/20 via-gray-900 to-pink-900/20" />
       

@@ -10,8 +10,8 @@ const Home = () => {
      const {games, loading, error} = useGames()
      const featuredGames = games.filter(game => game.ratings > 4.7)
   return (
-
-    <div>
+    
+    <div><title>Home</title>
       <div className='pt-4 md:pt-6 lg:pt-10' >
         <Slider />
         <h1 className='mt-8 lg:mt-20 mb-2 text-3xl md:text-5xl font-bold text-center text-orange-500'>Popular Games</h1>

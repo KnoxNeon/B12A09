@@ -43,6 +43,7 @@ export default function News() {
 
   return (
     <section className="min-h-screen bg-gray-900 text-white py-10 px-6">
+      <title>News</title>
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-black mb-12 text-center text-orange-500">
           Latest Game Updates
